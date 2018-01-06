@@ -1,6 +1,6 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+    /*margin: 60px auto;
+    width: 70%;*/
     background-color: lightgrey;
 }
 /*
@@ -26,13 +26,18 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 h2{
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     border-style: solid;
     border-color: black;
     border-left-style: none;
     border-top-style: none;
     border-right-style: none;
 }
+h3{
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 p {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 1em;
     line-height: 1.4em;
     color: #333;
@@ -69,13 +74,13 @@ ul.posts li {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: lightgrey;
     color: black;
 }
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
 }
 
