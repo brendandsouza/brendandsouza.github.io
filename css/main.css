@@ -24,6 +24,13 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+h2{
+    border-style: solid;
+    border-color: black;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+}
 p {
     font-size: 1em;
     line-height: 1.4em;
