@@ -18,21 +18,21 @@ $(document).ready(function(){
 	// }
 
 	$("#home").click(function(){
-		$("#home").toggleClass("active");
-		$("#about").toggleClass("inactive");
-		$("#resume").toggleClass("inactive");
+		$("#home").toggleClass("active", addOrRemove);
+		$("#about").toggleClass("inactive", addOrRemove);
+		$("#resume").toggleClass("inactive", addOrRemove);
 	});
 
 	$("#about").click(function(){
-		$("#about").toggleClass("active");
-		$("#home").toggleClass("inactive");
-		$("#resume").toggleClass("inactive");
+		$("#about").toggleClass("active", addOrRemove);
+		$("#home").toggleClass("inactive", addOrRemove);
+		$("#resume").toggleClass("inactive", addOrRemove);
 	});
 
 	$("#resume").click(function(){
-		$("#resume").toggleClass("active");
-		$("#home").toggleClass("inactive");
-		$("#about").toggleClass("inactive");
+		$("#resume").toggleClass("active", addOrRemove);
+		$("#home").toggleClass("inactive", addOrRemove);
+		$("#about").toggleClass("inactive", addOrRemove);
 	});
 });
 
