@@ -108,6 +108,16 @@ ul li {
     color: white;
 }
 
+.inactive {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
 /* Hide the link that should open and close the topnav on small screens */
 .navbar .icon {
     display: none;
