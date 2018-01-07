@@ -108,7 +108,7 @@ ul li {
     color: white;
 }
 
-.inactive {
+.active.not {
     float: left;
     display: block;
     color: #f2f2f2;
