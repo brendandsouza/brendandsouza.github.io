@@ -35,7 +35,7 @@ $(document).ready(function(){
 	}
 
 	// Loop all menu items
-	$('.navbar').each(function(){
+	$('.menu li').each(function(){
 
 	// select href
 	var href = $(this).find('a').attr('href');
