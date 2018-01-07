@@ -18,21 +18,21 @@ $(document).ready(function(){
 	// }
 
 	$("#home").click(function(){
-		$("#home").toggleClass("active", addOrRemove);
-		$("#about").toggleClass("inactive", addOrRemove);
-		$("#resume").toggleClass("inactive", addOrRemove);
+		$("#home").toggleClass("not", addOrRemove);
+		$("#about").toggleClass("not", addOrRemove);
+		$("#resume").toggleClass("not", addOrRemove);
 	});
 
 	$("#about").click(function(){
-		$("#about").toggleClass("active", addOrRemove);
-		$("#home").toggleClass("inactive", addOrRemove);
-		$("#resume").toggleClass("inactive", addOrRemove);
+		$("#about").toggleClass("not", addOrRemove);
+		$("#home").toggleClass("not", addOrRemove);
+		$("#resume").toggleClass("not", addOrRemove);
 	});
 
 	$("#resume").click(function(){
-		$("#resume").toggleClass("active", addOrRemove);
-		$("#home").toggleClass("inactive", addOrRemove);
-		$("#about").toggleClass("inactive", addOrRemove);
+		$("#resume").toggleClass("not", addOrRemove);
+		$("#home").toggleClass("not", addOrRemove);
+		$("#about").toggleClass("not", addOrRemove);
 	});
 });
 
