@@ -87,6 +87,22 @@ ul li {
 
 /* Style the links inside the navigation bar */
 .navbar a {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     float: left;
     display: block;
     color: #f2f2f2;
@@ -108,7 +124,7 @@ ul li {
     color: white;
 }
 
-.active.not {
+/*.active.not {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -116,7 +132,7 @@ ul li {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-}
+}*/
 
 /* Hide the link that should open and close the topnav on small screens */
 .navbar .icon {
