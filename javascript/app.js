@@ -1,4 +1,7 @@
 
+var MainController = function($scope){
+	$scope.message = "dhelllloooooo";
+};
 
 
 var work = function(){
