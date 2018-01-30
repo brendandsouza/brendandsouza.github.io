@@ -1,12 +1,8 @@
 
-var MainController = function($scope){
-	$scope.message = "dhelllloooooo";
+var app = angular.module("main", []);
+
+var mainController = function($scope){
+    $scope.message = "dhelloooo";
 };
 
-
-var work = function(){
-
-	console.log("working hard");
-};
-
-work();
+app.controller("mainController", mainController);
