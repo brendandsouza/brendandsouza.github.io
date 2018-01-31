@@ -1,63 +1,82 @@
----
-layout: default
-title: Brendan D'Souza - Resume
----
-<div class="blurb">
-	<h1>Resume</h1>
-</div>
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Brendan D'Souza - Resume</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="/javascript/app.js"></script>
+		</head>
+		<body ng-app="main">
+			<div class="navbar" id="myNavbar">
+		        <a href="/" id="home">Home</a>
+			    <a href="/about/about.html" id="about">About</a>
+		      	<a href="/resume/resume.html" id="resume">Resume</a>
+			</div>
+			<div class="container">
+			
+				<div class="blurb">
+					<h1>Resume</h1>
+				</div>
 
-<div class="List of Qualifications">
-	<h2>List of Qualifications</h2>
-	<ul>
-		<li>Problem solving and analytical skills developed by working as a member of a validation team.</li>
-        <li>Knowledge and hands-on experience in operating on Unix-based Operating Systems.</li>
-        <li>Intermediate experience with computer programming in Java, C/C++, and Python.</li>
-        <li>Experience working as a member of an IT helpdesk team, troubleshooting PC hardware and software.</li>
-    </ul>
-</div>
-<div class="Experience">
-	<h2>Experience</h2>
-	<h3><a target="_blank" href="https://evertz.com/">Product Verification Specialist, Evertz Microsystems, Burlington, Ontario</a></h3>
-	<ul>
-		<li>Created and documented test cases for various hardware and software products.</li>
-        <li>Debugged Python code to narrow down the source of a bug.</li>
-        <li>Troubleshot and solved various network-related issues in-house that surfaced when setting up test environments and reproducing issues.</li>
-    </ul>
-    <h3><a target="_blank" href="https://evertz.com/">Product Verification Specialist, Evertz Microsystems, Burlington, Ontario</a></h3>
-    <ul>
-    	<li>Member of the validation team, worked with other members of the team to solve software-related issues experienced by various customers.</li>
-        <li>Created test environments to reproduce bugs in software and verified that patches fixed the bug.</li>
-        <li>Operated on Linux/Unix OS, and created servers on virtual machines using VMware and CentOS.</li>
-        <li>Updated and documented software-related issues on JIRA.</li>
-    </ul>
-    <h3><a target="_blank" href="http://www.branksome.on.ca/Pages/default.aspx">Information Technology, Branksome Hall, Toronto, Ontario</a></h3>
-    <ul>
-    	<li>Communicating with staff and students to troubleshoot computer-related issues.</li>
-        <li>Worked on a PowerShell script that solved a specific Windows 8.1 issue and used a virtual machine for testing.</li>
-        <li>Member of the IT team that solved tickets relating to technology all around the school.</li>
-    </ul>
-</div>
-<div class="Education">
-	<h2>Education</h2>
-	<h3><a target="_blank" href="https://uwaterloo.ca/electrical-computer-engineering/">Candidate for Bachelor of Applied Science, <br/>2B Honours Computer Engineering<br/>University of Waterloo, Waterloo, Ontario</a></h3>
-	<p>Relevant courses: Operating Systems, Embedded Microprocessors, Signals and Systems, Electronic Systems 2</p>
-	<h3><a target="_blank" href="http://www.holytrinityoakville.ca/">Ontario Secondary School Diploma   <br/>Holy Trinity Secondary School, Oakville, Ontario, 2015</a></h3>
-</div>
-<div class="Projects">
-	<h2>Projects</h2>
-	<h3>Simulating a WAMP Router</h3>
-	<p>Simulated a WAMP router on a Windows machine to reproduce the issue of a 3rd-party device failing to subscribe to a Python script.</p>
-	<h3>Shortest path between nodes</h3>
-	<p>Created a C++ header file that finds the shortest path between nodes on a weighted graph using Dijkstra’s algorithm.</p>
-	<h3>Step counter and Shortest path Android app</h3>
-	<p>Worked in a group to create an Android app in Java that would determine the shortest path between two user-defined points and would use sensors to determine the displacement from the original position.</p>
-</div>
-
-
-
-
-
-
-
-
+				<div class="List of Qualifications">
+					<h2>List of Qualifications</h2>
+					<ul>
+						<li>Problem solving and analytical skills developed by working as a member of a validation team.</li>
+				        <li>Knowledge and hands-on experience in operating on Unix-based Operating Systems.</li>
+				        <li>Intermediate experience with computer programming in Java, C/C++, and Python.</li>
+				        <li>Experience working as a member of an IT helpdesk team, troubleshooting PC hardware and software.</li>
+				    </ul>
+				</div>
+				<div class="Experience">
+					<h2>Experience</h2>
+					<h3><a target="_blank" href="https://evertz.com/">Product Verification Specialist, Evertz Microsystems, Burlington, Ontario</a></h3>
+					<ul>
+						<li>Created and documented test cases for various hardware and software products.</li>
+				        <li>Debugged Python code to narrow down the source of a bug.</li>
+				        <li>Troubleshot and solved various network-related issues in-house that surfaced when setting up test environments and reproducing issues.</li>
+				    </ul>
+				    <h3><a target="_blank" href="https://evertz.com/">Product Verification Specialist, Evertz Microsystems, Burlington, Ontario</a></h3>
+				    <ul>
+				    	<li>Member of the validation team, worked with other members of the team to solve software-related issues experienced by various customers.</li>
+				        <li>Created test environments to reproduce bugs in software and verified that patches fixed the bug.</li>
+				        <li>Operated on Linux/Unix OS, and created servers on virtual machines using VMware and CentOS.</li>
+				        <li>Updated and documented software-related issues on JIRA.</li>
+				    </ul>
+				    <h3><a target="_blank" href="http://www.branksome.on.ca/Pages/default.aspx">Information Technology, Branksome Hall, Toronto, Ontario</a></h3>
+				    <ul>
+				    	<li>Communicating with staff and students to troubleshoot computer-related issues.</li>
+				        <li>Worked on a PowerShell script that solved a specific Windows 8.1 issue and used a virtual machine for testing.</li>
+				        <li>Member of the IT team that solved tickets relating to technology all around the school.</li>
+				    </ul>
+				</div>
+				<div class="Education">
+					<h2>Education</h2>
+					<h3><a target="_blank" href="https://uwaterloo.ca/electrical-computer-engineering/">Candidate for Bachelor of Applied Science, <br/>2B Honours Computer Engineering<br/>University of Waterloo, Waterloo, Ontario</a></h3>
+					<p>Relevant courses: Operating Systems, Embedded Microprocessors, Signals and Systems, Electronic Systems 2</p>
+					<h3><a target="_blank" href="http://www.holytrinityoakville.ca/">Ontario Secondary School Diploma   <br/>Holy Trinity Secondary School, Oakville, Ontario, 2015</a></h3>
+				</div>
+				<div class="Projects">
+					<h2>Projects</h2>
+					<h3>Simulating a WAMP Router</h3>
+					<p>Simulated a WAMP router on a Windows machine to reproduce the issue of a 3rd-party device failing to subscribe to a Python script.</p>
+					<h3>Shortest path between nodes</h3>
+					<p>Created a C++ header file that finds the shortest path between nodes on a weighted graph using Dijkstra’s algorithm.</p>
+					<h3>Step counter and Shortest path Android app</h3>
+					<p>Worked in a group to create an Android app in Java that would determine the shortest path between two user-defined points and would use sensors to determine the displacement from the original position.</p>
+				</div>
+			
+			</div><!-- /.container -->
+			<div class="contact">
+				<footer>
+		    		<ul>
+		        		<li><a href="mailto:b4dsouza@edu.uwaterloo.ca">email</a></li>
+		        		<li><a href="https://github.com/brendandsouza">github.com/brendandsouza</a></li>
+					</ul>
+				</footer>
+			</div>
+			
+		</body>
+	</html>
 
