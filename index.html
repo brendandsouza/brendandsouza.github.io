@@ -10,30 +10,32 @@
 		</head>
 		<body ng-app="main">
 			<div class="navbar" id="myNavbar">
-				
-	        		<!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
 		        <a href="/" id="home">Home</a>
 			    <a href="/about/about.html" id="about">About</a>
 		      	<a href="/resume/resume.html" id="resume">Resume</a>
-		        	
-				
 			</div>
-			<div class="container">
-			
-				<div class="blurb">
-					<h1>Hi there, I'm Brendan D'Souza!</h1>
-					<p>I am currently studying Computer Engineering at the University of Waterloo. This website is a work in progress...</p>
-					<div ng-controller="mainController">The Message is {{message}}</div>
-	    
-					<form name="search">
-						<input type="search" placeholder="search" ng-model="searchitem"/>
-						<input type="submit" value="Search">
-						<p>{{searchitem}}</p>
-					</form>
 
-				</div><!-- /.blurb -->
-			
-			</div><!-- /.container -->
+			<div class="intro">
+			</div>
+
+			<div class="about">
+				<h1>Hi there, I'm Brendan D'Souza!</h1>
+				<p>I am currently studying Computer Engineering at the University of Waterloo. This website is a work in progress...</p>
+				<div ng-controller="mainController">The Message is {{message}}</div>
+    
+				<form name="search">
+					<input type="search" placeholder="search" ng-model="searchitem"/>
+					<input type="submit" value="Search">
+					<p>{{searchitem}}</p>
+				</form>
+			</div>
+
+			<div class="experience">
+			</div>
+
+			<div class="education">
+			</div>
+
 			<div class="contact">
 				<footer>
 		    		<ul>
@@ -42,6 +44,6 @@
 					</ul>
 				</footer>
 			</div>
-			
+
 		</body>
 	</html>
