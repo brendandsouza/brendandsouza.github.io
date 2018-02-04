@@ -12,6 +12,7 @@
 
 .box h3 {
     color: white;
+    text-decoration: none;
 }
 
 .box h3:hover {
