@@ -38,7 +38,11 @@
 }
 
 .grey-bg {
+    background: darkgrey;
+}
 
+.grey-bg h3, h4 {
+    color: ivory;
 }
 
 .black-bg {
