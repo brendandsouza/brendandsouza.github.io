@@ -30,6 +30,6 @@ app.controller("mainController", mainController);
 $('scroll-on-click, a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
+    }, slow);
     return false;
 });
