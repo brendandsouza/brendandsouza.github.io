@@ -12,13 +12,13 @@ var scrollOnClick = function() {
     link: function(scope, $elm, attrs) {
       var idToScroll = attrs.href;
       $elm.on('click', function() {
-        var $target;
+        var target;
         if (idToScroll) {
-          $target = $(idToScroll);
+          target = $(idToScroll);
         } else {
-          $target = $elm;
+          target = $elm;
         }
-        $("body").animate({scrollTop: $($target).offset().top}, "slow");
+        $('html, body').animate({scrollTop: $(target).offset().top}, "slow");
       });
     }
   }
