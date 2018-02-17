@@ -18,7 +18,7 @@ var scrollOnClick = function() {
         } else {
           $target = $elm;
         }
-        $("body").animate({scrollTop: $target.offset().top}, "slow");
+        $("body").animate({scrollTop: $($target).offset().top}, "slow");
       });
     }
   }
