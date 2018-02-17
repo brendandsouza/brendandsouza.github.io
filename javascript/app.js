@@ -27,7 +27,7 @@ var mainController = function($scope){
 app.controller("mainController", mainController);
 
 //app.directive("scrollOnClick", scrollOnClick);
-$('scroll-on-click, a').click(function(){
+$("#scroll-on-click > a").click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, slow);
