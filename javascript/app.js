@@ -27,9 +27,19 @@ var scrollOnClick = function() {
 app.controller("mainController", mainController);
 
 app.directive("scrollOnClick", scrollOnClick);
-// $("#scroll-on-click > a").click(function(){
-//     $('html, body').animate({
-//         scrollTop: $( $(this).attr('href') ).offset().top
-//     }, slow);
-//     return false;
-// });
+
+function scrollNav() {
+  $('.nav a').click(function(){  
+    //Toggle Class
+    $(".active").removeClass("active");      
+    $(this).closest('a').addClass("active");
+    var theClass = $(this).attr("class");
+    $('.'+theClass).parent('a').addClass('active');
+    //Animate
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 160
+    }, 400);
+    return false;
+  });
+}
+scrollNav();
