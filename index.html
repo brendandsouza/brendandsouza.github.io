@@ -55,7 +55,7 @@
 
 
 <!DOCTYPE html>
-	<html>
+	<html ng-app="main">
 		<head>
 			<title>Brendan D'Souza</title>
 			<meta charset="UTF-8">
@@ -78,13 +78,13 @@
 			@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 			</style>
 		</head>
-		<body class="w3-black">
+		<body class="w3-black" ng-controller="mainController">
 
 		<!-- Icon Bar (Sidebar - hidden on small screens) -->
 		<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
 		  <!-- Avatar image in top left corner -->
 		  <!--<img src="/w3images/avatar_smoke.jpg" style="width:100%">-->
-		    <div id="scroll-on-click" class="nav">
+		    <div scroll-on-click>
 			  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black active">
 			    <i class="fa fa-home w3-xxlarge"></i>
 			    <p>HOME</p>
