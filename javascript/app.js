@@ -1,5 +1,5 @@
 
-var app = angular.module("main", []);
+var app = angular.module("main", ['ngAnimate']);
 
 var mainController = function($scope){
     $scope.message = "dhelloooo";
