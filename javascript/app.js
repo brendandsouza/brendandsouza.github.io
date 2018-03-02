@@ -27,6 +27,6 @@
 	app.controller("mainController", mainController);
 
 	app.directive("scrollOnClick", scrollOnClick);
-})
+}());
 	
 
