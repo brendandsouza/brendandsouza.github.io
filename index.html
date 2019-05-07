@@ -1,59 +1,3 @@
-<!-- <!DOCTYPE html>
-	<html>
-		<head>
-			<title>Brendan D'Souza</title>
-			
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-			<script src="/javascript/app.js"></script>
-		</head>
-		<body ng-app="main">
-			<div class="navbar" id="myNavbar">
-		        <a href="/" id="home">Home</a>
-		      	<a href="/resume/resume.html" id="resume">Resume</a>
-			</div>
-
-			<div class="intro">
-			</div>
-
-			<div class="about">
-				<h1>Hi there, I'm Brendan D'Souza!</h1>
-				<p>I am currently studying Computer Engineering at the University of Waterloo. This website is a work in progress...</p>
-				<div ng-controller="mainController">The Message is {{message}}</div>
-    
-				<form name="search">
-					<input type="search" placeholder="search" ng-model="searchitem"/>
-					<input type="submit" value="Search">
-					<p>{{searchitem}}</p>
-				</form>
-			</div>
-
-			<div class="experience">
-			</div>
-
-			<div class="education">
-			</div>
-
-			<div class="contact">
-				<footer>
-		    		<ul>
-		        		<li><a href="mailto:b4dsouza@edu.uwaterloo.ca">email</a></li>
-		        		<li><a href="https://github.com/brendandsouza">github.com/brendandsouza</a></li>
-					</ul>
-				</footer>
-			</div>
-
-		</body>
-	</html>
-
--->
-
-
-
-
-
-
 <!DOCTYPE html>
 	<html ng-app="main">
 		<head>
@@ -111,7 +55,7 @@
 		<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
 		  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
 		    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-		    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+		    <!-- <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a> -->
 		    <a href="#experience" class="w3-bar-item w3-button" style="width:25% !important">EXPERIENCE</a>
 		    <a href="#education" class="w3-bar-item w3-button" style="width:25% !important">EDUCATION</a>
 		    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
@@ -127,7 +71,7 @@
 		    <p>Student Computer Engineer.</p>
 		  </header>
 
-		  <!-- About Section -->
+		  <!-- About Section 
 		  <div class="grey-bg">
 			  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
 			    <h2 class="w3-text-light-grey">About Me</h2>
@@ -135,9 +79,9 @@
 			    <p>
 			    </p>
 			    
-			  <!-- End About Section -->
+			  End About Section 
 			  </div>
-		  </div>
+		  </div> -->
 		  
 		  <!-- Experience Section -->
 		  <div class="black-bg">
@@ -149,9 +93,16 @@
 			    	<a href="https://www.ultimatesoftware.com/" target="_blank">
 				    	<h3>Ultimate Software</h3>
 				    </a>
-			    	<div class="smalldate">January 2018 - present</div>
+			    	<div class="smalldate">September 2018 - December 2018</div>
+			    	<p>Software Developer</p>
+			    </div>
+
+			    <div class="box">
+			    	<a href="https://www.ultimatesoftware.com/" target="_blank">
+				    	<h3>Ultimate Software</h3>
+				    </a>
+			    	<div class="smalldate">January 2018 - April 2018</div>
 			    	<p>Software Test Engineer</p>
-			    	
 			    </div>
 
 			    <div class="box">
@@ -179,7 +130,7 @@
 			    	<p>Information Technology</p>
 			    </div>
 
-			    <a href="/resume/2B.pdf" target="_blank">
+			    <a href="/resume/4A.pdf" target="_blank">
 				    <button class="w3-button w3-light-grey w3-padding-large w3-section">
 				      <i class="fa fa-download"></i> Download Resume
 				    </button>
@@ -219,30 +170,11 @@
 			      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> LinkedIn: <a href="https://www.linkedin.com/in/brendan-d-souza-2a0b3b14a" target="_blank">Brendan D'Souza</a></p>
 			    </div><br>
 		      </div>
-		    <!--
-		    <p>Lets get in touch. Send me a message:</p>
-
-		    <form action="/action_page.php" target="_blank">
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-		      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-		      <p>
-		        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-		          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-		        </button>
-		      </p>
-		    </form>
-		  
-			-->
 		  <!-- End Contact Section -->
 		  </div>
 		  
 		    <!-- Footer -->
 		  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-		    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-		    <i class="fa fa-instagram w3-hover-opacity"></i>
-		    <i class="fa fa-snapchat w3-hover-opacity"></i>
 		    <a href="https://github.com/brendandsouza" target="_blank">
 			  	<i class="fa fa-github-square w3-hover-opacity"></i>
 			</a>
