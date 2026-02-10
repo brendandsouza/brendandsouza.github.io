@@ -1,200 +1,167 @@
 <!DOCTYPE html>
-	<html ng-app="main">
-		<head>
-			<title>Brendan D'Souza</title>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-			<script src="/javascript/app.js"></script>
-			<style>
-			body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-			.w3-row-padding img {margin-bottom: 12px}
-			/* Set the width of the sidebar to 120px */
-			.w3-sidebar {width: 120px;background: #222;}
-			/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-			#main {margin-left: 120px}
-			/* Remove margins from "page content" on small screens */
-			@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-			</style>
-		</head>
-		<body class="w3-black" ng-controller="mainController">
+<html lang="en">
+<head>
+    <title>Brendan D'Souza</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brendan D'Souza - Software Developer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="javascript/app.js" defer></script>
+</head>
+<body>
 
-		<!-- Icon Bar (Sidebar - hidden on small screens) -->
-		<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-		  <!-- Avatar image in top left corner -->
-		  <!--<img src="/w3images/avatar_smoke.jpg" style="width:100%">-->
-		  <a scroll-on-click href="#" class="w3-bar-item w3-button w3-padding-large w3-black active">
-		    <i class="fa fa-home w3-xxlarge"></i>
-		    <p>HOME</p>
-		  </a>
-<!-- 		  <a scroll-on-click href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-		    <i class="fa fa-user w3-xxlarge"></i>
-		    <p>ABOUT</p>
-		  </a> -->
-		  <a scroll-on-click href="#experience" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-		  	<i class="fa fa-check-square-o w3-xxlarge"></i>
-		    <p>EXPERIENCE</p>
-		  </a>
-		  <a scroll-on-click href="#education" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-		  	<i class="fa fa-book w3-xxlarge"></i>
-		  	<p>EDUCATION</p>
-		  </a>
-		  <a scroll-on-click href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-		    <i class="fa fa-envelope w3-xxlarge"></i>
-		    <p>CONTACT</p>
-		  </a>
-		</nav>
+    <!-- Sidebar Navigation (hidden on small screens) -->
+    <nav class="sidebar" id="sidebar">
+        <a href="#home" class="nav-link active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
+        <a href="#experience" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <span>Experience</span>
+        </a>
+        <a href="#skills" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span>Skills</span>
+        </a>
+        <a href="#education" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+            <span>Education</span>
+        </a>
+        <a href="#contact" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Contact</span>
+        </a>
+    </nav>
 
-		<!-- Navbar on small screens (Hidden on medium and large screens) -->
-		<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-		  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-		    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-		    <!-- <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a> -->
-		    <a href="#experience" class="w3-bar-item w3-button" style="width:25% !important">EXPERIENCE</a>
-		    <a href="#education" class="w3-bar-item w3-button" style="width:25% !important">EDUCATION</a>
-		    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-		  </div>
-		</div>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-		<!-- Page Content -->
-		<!--<div class="w3-padding-large" id="main"> -->
-		<div id="main">
-		  <!-- Header/Home -->
-		  <header class="w3-container w3-center w3-black" id="home" style="height:700px; vertical-align:middle; padding-top:200px; padding-bottom: 200px;">
-		    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Brendan D'Souza.</h1>
-		    <p>Student Computer Engineer.</p>
-		  </header>
+    <!-- Main Content -->
+    <main id="main">
 
-		  <!-- About Section 
-		  <div class="grey-bg">
-			  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-			    <h2 class="w3-text-light-grey">About Me</h2>
-			    <hr style="width:200px" class="w3-opacity">
-			    <p>
-			    </p>
-			    
-			  End About Section 
-			  </div>
-		  </div> -->
-		  
-		  <!-- Experience Section -->
-		  <div class="black-bg">
-			  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="experience">
-			    <h2 class="w3-text-light-grey">Experience</h2>
-			    <hr style="width:200px" class="w3-opacity">
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <h1>Brendan D'Souza</h1>
+            <p class="subtitle">Software Developer</p>
+        </header>
 
-			    <div class="box">
-			    	<a href="https://www.thomsonreuters.com/en.html" target="_blank">
-				    	<h3>Thomson Reuters</h3>
-				    </a>
-			    	<div class="smalldate">September 2019 - December 2019</div>
-			    	<p>Software Developer (Data Engineering Team)</p>
-			    </div>
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="section-divider"></div>
 
-			    <div class="box">
-			    	<a href="https://www.ultimatesoftware.com/" target="_blank">
-				    	<h3>Ultimate Software</h3>
-				    </a>
-			    	<div class="smalldate">September 2018 - December 2018</div>
-			    	<p>Software Developer</p>
-			    </div>
+                <div class="experience-card">
+                    <a href="https://www.geotab.com/" target="_blank" rel="noopener noreferrer">
+                        <h3>Geotab Inc.</h3>
+                    </a>
+                    <span class="date">June 2020 - Present</span>
+                    <p class="role">Software Developer</p>
+                </div>
 
-			    <div class="box">
-			    	<a href="https://www.ultimatesoftware.com/" target="_blank">
-				    	<h3>Ultimate Software</h3>
-				    </a>
-			    	<div class="smalldate">January 2018 - April 2018</div>
-			    	<p>Software Test Engineer</p>
-			    </div>
+                <div class="experience-card">
+                    <a href="https://www.thomsonreuters.com/" target="_blank" rel="noopener noreferrer">
+                        <h3>Thomson Reuters</h3>
+                    </a>
+                    <span class="date">September 2019 - December 2019</span>
+                    <p class="role">Software Developer Intern</p>
+                </div>
 
-			    <div class="box">
-			    	<a href="https://evertz.com/" target="_blank">
-				    	<h3>Evertz Microsystems</h3>
-				    </a>
-			    	<div class="smalldate">May 2017 - August 2017</div>
-			    	<p>Product Verification Specialist</p>
-			    </div>
+                <div class="experience-card">
+                    <a href="https://www.ukg.com/" target="_blank" rel="noopener noreferrer">
+                        <h3>Ultimate Software</h3>
+                    </a>
+                    <span class="date">January 2018 - December 2018</span>
+                    <p class="role">Full Stack Developer / Test Engineer Intern</p>
+                </div>
 
-			    <div class="box">
-			    	<a href="https://evertz.com/" target="_blank">
-				    	<h3>Evertz Microsystems</h3>
-				    </a>
-			    	<div class="smalldate">September 2016 - December 2016</div>
-			    	<p>Product Verification Specialist</p>
-				    </a>
-			    </div>
+                <a href="resume/brendan_full_time.pdf" target="_blank" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download Resume
+                </a>
+            </div>
+        </section>
 
-			    <div class="box">
-			    	<a href="http://www.branksome.on.ca/Pages/default.aspx" target="_blank">
-				    	<h3>Branksome Hall</h3>
-				    </a>
-			    	<div class="smalldate">January 2016 - April 2016</div>
-			    	<p>Information Technology</p>
-			    </div>
+        <!-- Skills Section -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="section-divider"></div>
+                <div class="skills-grid">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">.NET</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">GCP</span>
+                </div>
+            </div>
+        </section>
 
-			    <a href="/resume/brendan_full_time.pdf" target="_blank">
-				    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-				      <i class="fa fa-download"></i> Download Resume
-				    </button>
-				</a>
-			  <!-- End Experience Section -->
-			  </div>
-		  </div>
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="section-divider"></div>
 
-		  <!-- Education Section -->
-		  <div class="grey-bg">
-			  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="education">
-			    <h2 class="w3-text-light-grey">Education</h2>
-			    <hr style="width:200px" class="w3-opacity">
+                <div class="education-item">
+                    <h3>Bachelor of Applied Science, Honours Computer Engineering</h3>
+                    <h4>University of Waterloo</h4>
+                    <span class="date">2015 - 2020</span>
+                </div>
+            </div>
+        </section>
 
-			    <h3>Candidate for Bachelor of Applied Science<br>4B Honours Computer Engineering</h3>
-			    <h4>University of Waterloo</h4>
-			    <div class="smalldate">April 2020 (expected)</div>
+        <!-- Contact Section -->
+        <section class="section section-alt" id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="section-divider"></div>
 
-			    <h3>Ontario Secondary School Diploma</h3>
-			    <h4>Holy Trinity Catholic Secondary School</h4>
-			    <div class="smalldate">2015</div>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Toronto, Ontario, Canada</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>905-466-1285</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:brendan_dsouza@hotmail.com">brendan_dsouza@hotmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://www.linkedin.com/in/brendan-d-souza-2a0b3b14a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-			  <!-- End Education Section -->
-			  </div>
-		  </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/brendan-d-souza-2a0b3b14a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/brendandsouza" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+            </div>
+        </footer>
 
-		  <!-- Contact Section -->
-		  <div class="black-bg">
-			  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-			    <h2 class="w3-text-light-grey">Contact Me</h2>
-			    <hr style="width:200px" class="w3-opacity">
+    </main>
 
-			    <div class="w3-section">
-			      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Oakville, ON, Canada</p>
-			      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 905-466-1285</p>
-			      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Email: <a href="mailto:b4dsouza@edu.uwaterloo.ca">b4dsouza@edu.uwaterloo.ca</a></p>
-			      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> LinkedIn: <a href="https://www.linkedin.com/in/brendan-d-souza-2a0b3b14a" target="_blank">Brendan D'Souza</a></p>
-			    </div><br>
-		      </div>
-		  <!-- End Contact Section -->
-		  </div>
-		  
-		    <!-- Footer -->
-		  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-		    <a href="https://www.linkedin.com/in/brendan-d-souza-2a0b3b14a" target="_blank">
-		    	<i class="fa fa-linkedin w3-hover-opacity"></i>
-		    </a>
-		    <a href="https://github.com/brendandsouza" target="_blank">
-			  	<i class="fa fa-github-square w3-hover-opacity"></i>
-			</a>
-		  <!-- End footer -->
-		  </footer>
-
-		<!-- END PAGE CONTENT -->
-		</div>
-
-		</body>
-	</html>
-
+</body>
+</html>

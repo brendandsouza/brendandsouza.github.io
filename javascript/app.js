@@ -1,32 +1,34 @@
-(function() {
-	var app = angular.module("main", []);
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-	var mainController = function($scope){
-	    $scope.message = "dhelloooo";
-	    $scope.searchitem = "test";
-	};
+// Update active nav link on scroll
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section, header');
 
-	var scrollOnClick = function() {
-	  return {
-	    restrict: 'A',
-	    link: function(scope, elm, attrs) {
-	      var idToScroll = attrs.href;
-	      elm.on('click', function() {
-	        var target;
-	        if (idToScroll) {
-	          target = $(idToScroll);
-	        } else {
-	          target = $(elm);
-	        }
-	        $("html, body").animate({scrollTop: $(target).offset().top}, "slow");
-	      });
-	    }
-	  }
-	}
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
 
-	app.controller("mainController", mainController);
-
-	app.directive("scrollOnClick", scrollOnClick);
-}());
-	
-
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
